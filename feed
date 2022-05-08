@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Mack's Blog</title>
+  <subtitle>By Mack Goodstein</subtitle>
+  <link rel="alternate" type="text/html" href="https://mack.im/blog/" />
+  <link rel="self" type="application/atom+xml" href="https://mack.im/blog/feed" />
+  <id>https://mack.im/blog/feed</id>
+  {{$pathParts := splitList "/" .OriginalReq.URL.Path}}
+  {{$posts := listFiles "/posts"}} 
+  
+  <updated>{{now.UTC}}</updated>
+  <rights>Copyright © 2022, Mack Goodstein</rights>
+  {{range reverse $posts}}
+    {{$postFilePath := printf "/posts/%s" .}}
+    {{$markdownFile := (include $postFilePath | splitFrontMatter)}}
+    <entry>
+	    <title>{{$markdownFile.Meta.title}}</title>
+	    <link rel="alternate" type="text/html" href="https://twitter.com/playdate/status/1520144706511904768" />
+	    <link rel="shorturl" type="text/html" href="http://df4.us/u5w" />
+	    <link rel="related" type="text/html" href="https://daringfireball.net/linked/2022/05/06/stevenf-gopher-playdate" />
+	    <id>{{ . }}</id>
+	    <published>{{$markdownFile.Meta.date}}</published>
+	    <updated>{{$markdownFile.Meta.date}}</updated>
+	    <author>
+		    <name>Mack Goodstein</name>
+		    <uri>http://mack.im/blog/</uri>
+	    </author>
+	    <content type="html" xml:base="https://mack.im/blog/" xml:lang="en">
+        <![CDATA[ {{markdown $markdownFile.Body}} ]]>
+      </content>
+    </entry>
+  {{end}}
+</feed>
+<!-- THE END -->

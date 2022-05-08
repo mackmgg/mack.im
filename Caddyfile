@@ -1,0 +1,17 @@
+localhost
+
+file_server /races/*
+file_server /static/*
+file_server /templates/*
+
+templates {
+	mime text/html application/xml
+}
+encode gzip
+
+rewrite /pages/*         /templates/index.html
+rewrite / /templates/index.html
+rewrite /blog/post/* /templates/post.html
+rewrite /blog/ /templates/blog.html
+rewrite /blog /templates/blog.html
+rewrite /blog/feed /templates/rss.xml
