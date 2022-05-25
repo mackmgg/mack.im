@@ -3,6 +3,7 @@ localhost
 file_server /races/*
 file_server /static/*
 file_server /templates/*
+file_server /photos/*
 
 templates {
 	mime text/html application/xml
