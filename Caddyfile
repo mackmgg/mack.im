@@ -16,3 +16,5 @@ rewrite /blog/post/* /templates/post.html
 rewrite /blog/ /templates/blog.html
 rewrite /blog /templates/blog.html
 rewrite /blog/feed /templates/rss.xml
+rewrite /photos /templates/photos.html
+rewrite /photos/ /templates/photos.html
