@@ -1,9 +1,6 @@
 localhost
 
-file_server /races/*
-file_server /static/*
-file_server /templates/*
-file_server /photos/*
+file_server
 
 templates {
 	mime text/html application/xml
@@ -18,3 +15,14 @@ rewrite /blog /templates/blog.html
 rewrite /blog/feed /templates/rss.xml
 rewrite /photos /templates/photos.html
 rewrite /photos/ /templates/photos.html
+
+handle_errors {
+    @404 {
+        expression {http.error.status_code} == 404
+    }
+    rewrite @404 /error/404.html
+    file_server
+	templates {
+		mime text/html
+	}
+}
