@@ -33,17 +33,18 @@
           font-size: 3.5rem;
         }
       }
+      
     </style>
     <!-- Custom styles for this template -->
     <link href="/static/main.css" rel="stylesheet">
   </head>
   <body class="">
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-	  <header class="masthead mb-auto">
+    <div class="container d-flex w-100 h-100 p-3 mx-auto flex-column">
+	  <header class="masthead mb-auto w-75">
       {{include "/templates/header.html"}}
 	  </header>
 
-	  <main role="main" class="inner cover h-75">
+	  <main role="main" class="inner text cover h-75 mx-auto">
 	    <h1 class="cover-heading">Mack Goodstein</h1>
 	    <p class="lead">{{markdown $markdownFile.Body}}</p>
 	  </main>
