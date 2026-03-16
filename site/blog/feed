@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Mack's Blog</title>
+  <subtitle>By Mack Goodstein</subtitle>
+  <link rel="alternate" type="text/html" href="https://mack.im/blog/" />
+  <link rel="self" type="application/atom+xml" href="https://mack.im/blog/feed" />
+  <id>https://mack.im/blog/feed</id>
+  
+   
+  
+  <updated>2026-03-16T04:09:37Z</updated>
+  <rights>Copyright © 2026, Mack Goodstein</rights>
+  
+    <entry>
+          <title>New Website</title>
+          <link rel="alternate" type="text/html" href="https://mack.im/blog/" />
+          <id>tag:mack.im,2026:/2026_03_15_1</id>
+          <published>2026-03-15T15:00:00-06:00</published>
+          <updated>2026-03-15T15:00:00-06:00</updated>
+          <author>
+            <name>Mack Goodstein</name>
+            <uri>http://mack.im/blog/</uri>
+          </author>
+          <content type="html" xml:base="https://mack.im/blog/" xml:lang="en">
+            <![CDATA[ <p>After a few years, it was time to update the website. The main reason was to
+            remove all the external dependencies and trackers. As someone who generally
+            blocks them on my devices, it seemed wrong to have some on my website.</p>
+            ]]>
+          </content>
+        </entry>
+
+    
+    <entry>
+	    <title>Antelope Canyon 50</title>
+	    <link rel="alternate" type="text/html" href="https://mack.im/blog/" />
+	    <id>tag:mack.im,2022:/2022_05_07_1</id>
+	    <published>2022-05-07T15:00:00-06:00</published>
+	    <updated>2022-05-07T15:00:00-06:00</updated>
+	    <author>
+		    <name>Mack Goodstein</name>
+		    <uri>http://mack.im/blog/</uri>
+	    </author>
+	    <content type="html" xml:base="https://mack.im/blog/" xml:lang="en">
+        <![CDATA[ <p>In March I ran the Antelope Canyon 50 miler. <a href="/races/antelope/">My race report is now up here</a>.</p>
+ ]]>
+      </content>
+    </entry>
+  
+    
+    
+    <entry>
+	    <title>My Blog</title>
+	    <link rel="alternate" type="text/html" href="https://mack.im/blog/" />
+	    <id>tag:mack.im,2022:/2022_05_06_1</id>
+        <published>2022-05-06T15:00:00-06:00</published>
+	    <updated>2022-05-06T15:00:00-06:00</updated>
+	    <author>
+		    <name>Mack Goodstein</name>
+		    <uri>http://mack.im/blog/</uri>
+	    </author>
+	    <content type="html" xml:base="https://mack.im/blog/" xml:lang="en">
+        <![CDATA[ <p>This where where I'll post things, but probably not very often.</p>
+ ]]>
+      </content>
+    </entry>
+  
+</feed>
+<!-- THE END -->
