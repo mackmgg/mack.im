@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+  Albums:
+  <div class="grid">
+  {% for alb in album.albums %}
+    <div>
+      <a href="{{ alb.url }}">{{ alb.title }}</a>
+    </div>
+  {% endfor %}
+  </div>
+
+{% endblock %}

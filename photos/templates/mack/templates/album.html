@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block extra_head %}
+    <link type="text/css" rel="stylesheet" href="{{ theme.url }}/css/lightgallery.css" />
+
+    <link type="text/css" rel="stylesheet" href="{{ theme.url }}/css/lg-zoom.css" />
+    <link type="text/css" rel="stylesheet" href="{{ theme.url }}/css/lg-thumbnail.css" />
+    
+    <link type="text/css" rel="stylesheet" href="{{ theme.url }}/css/justifiedGallery.min.css" />
+{% endblock %}
+
+{% block footer %}
+    <script src="{{ theme.url }}/js/lightgallery.min.js"></script>
+
+    <!-- lightgallery plugins -->
+    <script src="{{ theme.url }}/js/plugins/thumbnail/lg-thumbnail.min.js"></script>
+    <script src="{{ theme.url }}/js/plugins/zoom/lg-zoom.min.js"></script>
+
+    <script src="{{ theme.url }}/js/jquery-3.7.1.min.js"></script>
+    <script src="{{ theme.url }}/js/jquery.justifiedGallery.min.js"></script>
+    
+    <script type="text/javascript">
+        lightGallery(document.getElementById('lightgallery'), {
+            plugins: [lgThumbnail],
+            speed: 100,
+            licenseKey: 'LIG-ED04BBA3-F67C-46C5-918E-AD6EBB6D987B'
+        });
+        $("#lightgallery").justifiedGallery({
+          lastRow: 'nojustify',
+          captions: false,
+          margins: 1,
+          rowHeight: 300,
+          border: 20
+        });
+    </script>
+{% endblock %}
+
+{% block content %}
+<div id="lightgallery" >
+    {% for media in album.medias %}
+    {% if media.type == "image" %}
+    <a href="{{ media.url }}" data-lg-size="{{ media.size.width }}-{{ media.size.height }}">
+        <img alt="{{ media.title }}" src="{{ media.thumbnail }}" />
+    </a>
+    {% endif %}
+    {% endfor %}
+</div>
+{% endblock %}
